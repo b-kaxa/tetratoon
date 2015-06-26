@@ -22,3 +22,25 @@ post '/new' do
   
   redirect '/'
 end
+
+post '/update' do
+
+  # 大体こんな感じだけどデータによっては後でロジックを変更
+  if params[:black]
+    @content = Gamedata.find(params[:id])
+
+    @content.update({
+      data: params[:data]
+    })
+  end
+
+  if params[:white]
+    @content = Gamedata.find(params[:id])
+
+    @content.update({
+      data: params[:data]
+    })
+  end
+
+  redirect '/'
+end
