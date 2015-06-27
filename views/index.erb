@@ -3,12 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>BBS</title>
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 <body>
-  <form action="/new" method="post">
-    <p>数値：<input type="text" name="data"></p>
-    <p><input type="submit" value="投稿"></p>
-  </form>
-
+  <div class="container-fluid">
+    <form action="/new" method="post">
+      <p>数値：<input type="text" name="data"></p>
+      <p><input type="submit" value="投稿"></p>
+    </form>
+    
+    <table class="table-bordered">
+      <% @gamedata.each.with_index(1) do |data,index| %>
+      <tr>
+        <!--data.dataの値によって現在のマスの色を変える-->
+        <% if data.data == 2 then %>
+        <td>aaa</td>
+        <% elsif data.data == 22 then %>
+        <td>bbb</td>
+        <% else %>
+        <td>yyy</td>
+        <% end %>
+        <td><%= index %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
 </body>
 </html>

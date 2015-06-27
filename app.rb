@@ -8,6 +8,7 @@ require './image_uploader.rb'
 require './models.rb'
 
 get '/' do
+  @gamedata = Gamedata.all
   erb :index
 end
 
