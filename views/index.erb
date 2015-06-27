@@ -14,8 +14,8 @@
     </form>
     
     <table class="table-bordered">
+      <% @gamedata.each.with_index(1) do |data,index| %>
       <tr>
-      <% @gamedata.each do |data| %>
         <!--data.dataの値によって現在のマスの色を変える-->
         <% if data.data == 2 then %>
         <td>aaa</td>
@@ -24,8 +24,9 @@
         <% else %>
         <td>yyy</td>
         <% end %>
-      <% end %>
+        <td><%= index %></td>
       </tr>
+      <% end %>
     </table>
   </div>
 </body>
