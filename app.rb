@@ -8,7 +8,8 @@ require './image_uploader.rb'
 require './models.rb'
 
 get '/' do
-  @gamedata = Gamedata.all
+  @gamedata1 = Gamedata.limit(10).offset(0)
+  @gamedata2 = Gamedata.limit(10).offset(10)
   erb :index
 end
 

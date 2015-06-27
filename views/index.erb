@@ -13,20 +13,35 @@
       <p><input type="submit" value="投稿"></p>
     </form>
     
-    <table class="table-bordered">
-      <% @gamedata.each.with_index(1) do |data,index| %>
+    <table class="table table-bordered">
       <tr>
+      <% @gamedata1.each.with_index(1) do |data,index| %>
         <!--data.dataの値によって現在のマスの色を変える-->
-        <% if data.data == 2 then %>
-        <td>aaa</td>
-        <% elsif data.data == 22 then %>
-        <td>bbb</td>
+        <% if data.data == 1 then %>
+        <td>白</td>
+        <% elsif data.data == 2 then %>
+        <td>黒</td>
         <% else %>
-        <td>yyy</td>
+        <td>灰</td>
         <% end %>
-        <td><%= index %></td>
-      </tr>
+      <%= index %>
       <% end %>
+      </tr>
+
+      <tr>
+        <% @gamedata2.each.with_index(1) do |data,index| %>
+        <!--data.dataの値によって現在のマスの色を変える-->
+        <% if data.data == 1 then %>
+        <td>白</td>
+        <% elsif data.data == 2 then %>
+        <td>黒</td>
+        <% else %>
+        <td>灰</td>
+        <% end %>
+        <%= index %>
+        <% end %>
+      </tr>
+
     </table>
   </div>
 </body>
