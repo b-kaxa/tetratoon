@@ -1,9 +1,8 @@
 body {
     background: url("../img/back.png");
-    color: white;
 }
 .center {
-    margin: 20px auto;
+    margin: 10px auto;
 }
 .center img {
     width: auto;
@@ -13,7 +12,7 @@ body {
 .table {
     width: 400px;
     height: 400px;
-    margin: 10px auto 0;
+    margin: 0 auto;
 }
 .table td {
     width: 10%;
@@ -31,8 +30,19 @@ body {
     /*background-color: gray;*/
 }
 div.row{
-    margin: 20px auto;
+    margin: 20px auto 0;
     height: auto;
+}
+div.next_blocks img {
+    width: auto;
+    height: 20px;
+}
+div.remaining_turn img {
+    width: auto;
+    height: 20px;
+}
+div.remaining_turn h3 {
+    padding-left: 15px;
 }
 div.next_blocks table {
     width: auto;
@@ -42,4 +52,11 @@ div.next_blocks table {
 div.next_blocks table td{
     width: 40px;
     height: 40px;
+    text-align: center;
+}
+.font_black {
+    color: black;
+}
+.font_white {
+    color: white;
 }
