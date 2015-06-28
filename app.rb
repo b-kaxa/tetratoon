@@ -36,8 +36,8 @@ end
 get '/reset' do
 
   white_id = [1..10]
+  gray_id  = [11..90]
   black_id = [91..100]
-  gray_id = [11..90]
 
   Gamedata.where(id: white_id).update_all(data: 1)
   Gamedata.where(id: black_id).update_all(data: 2)

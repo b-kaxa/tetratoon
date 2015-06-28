@@ -11,7 +11,7 @@
 <body>
   <div class="container-fluid">
     <div class="center">
-      <img src="/assets/img/logo.png">
+      <a href="/reset"><img src="/assets/img/logo.png"></a>
     </div>
 
     <table class="table table-bordered">
@@ -138,23 +138,7 @@
     <div class="row">
       <div class="col-xs-6 next_blocks">
         <img src="/assets/img/next_block.png">
-        <table class="table table-bordered" id="next_blocks">
-          <tr>
-            <td class="black font_white" id="1">■</td>
-            <td class ="gray" id="2"></td>
-            <td class="gray" id="3"></td>
-          </tr>
-          <tr>
-            <td class="black" id="4"></td>
-            <td class ="gray" id="5"></td>
-            <td class="gray" id="6"></td>
-          </tr>
-          <tr>
-            <td class="gray" id="7"></td>
-            <td class ="black" id="8"></td>
-            <td class="black" id="9"></td>
-          </tr>
-        </table>
+        <%= erb :next_blocks, locals: { pattern: rand(10) + 1} %>
       </div>
       <div class="col-xs-6 remaining_turn font_white">
         <img src="/assets/img/remaining_turn.png">

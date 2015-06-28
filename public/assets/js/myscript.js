@@ -33,7 +33,7 @@ $(function(){
         data : 2,
         update_blocks: update_blocks
       },
-      success: function(msg){
+      success: function(){
         location.href="/";
       }
     });
