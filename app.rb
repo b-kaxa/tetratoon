@@ -8,6 +8,7 @@ require './image_uploader.rb'
 require './models.rb'
 
 get '/' do
+  # 力技
   @gamedata1 = Gamedata.limit(10).offset(0)
   @gamedata2 = Gamedata.limit(10).offset(10)
   @gamedata3 = Gamedata.limit(10).offset(20)
@@ -21,31 +22,26 @@ get '/' do
   erb :index
 end
 
-post '/new' do
-  Gamedata.create({
-    data: params[:data]
-  })
-  
+post '/update' do
+
+  if params[:data]
+    data = params[:data]
+  end
+
+  Gamedata.where(id: params[:update_blocks]).update_all(data: data)
+
   redirect '/'
 end
 
-post '/update' do
+get '/reset' do
 
-  # if params[:black] then
-    # if params[:data]
-    #   data = params[:data]
-    # end
+  white_id = [1..10]
+  black_id = [91..100]
+  gray_id = [11..90]
 
-    # Gamedata.where(id: params[:update_blocks]).update_all(data: data)
-  # end
-
-  # if params[:white] then
-    if params[:data]
-      data = params[:data]
-    end
-
-    Gamedata.where(id: params[:update_blocks]).update_all(data: data)
-  # end
+  Gamedata.where(id: white_id).update_all(data: 1)
+  Gamedata.where(id: black_id).update_all(data: 2)
+  Gamedata.where(id: gray_id).update_all(data: 0)
 
   redirect '/'
 end
