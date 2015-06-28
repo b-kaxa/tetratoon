@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/mystyle.css">
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="/assets/js/myscript.js"></script>
 </head>
 <body>
   <div class="container-fluid">
@@ -15,7 +16,7 @@
 
     <table class="table table-bordered">
       <tr>
-      <% @gamedata1.each.with_index(0) do |data,index| %>
+        <% @gamedata1.each.with_index(0) do |data,index| %>
         <% if data.data == 1 then %>
         <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
@@ -23,17 +24,17 @@
         <% else %>
         <td class="gray" id="<%= index %>"></td>
         <% end %>
-      <% end %>
+        <% end %>
       </tr>
 
       <tr>
         <% @gamedata2.each.with_index(10) do |data,index| %>
         <% if data.data == 1 then %>
-        <td class="white"></td>
+        <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
@@ -41,11 +42,11 @@
       <tr>
         <% @gamedata3.each.with_index(20) do |data,index| %>
         <% if data.data == 1 then %>
-        <td class="white"></td>
+        <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
@@ -53,11 +54,11 @@
       <tr>
         <% @gamedata4.each.with_index(30) do |data,index| %>
         <% if data.data == 1 then %>
-        <td class="white"></td>
+        <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
