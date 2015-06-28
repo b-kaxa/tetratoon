@@ -66,11 +66,11 @@
       <tr>
         <% @gamedata5.each.with_index(41) do |data,index| %>
         <% if data.data == 1 then %>
-        <td class="white"></td>
+        <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
@@ -78,11 +78,11 @@
       <tr>
         <% @gamedata6.each.with_index(51) do |data,index| %>
         <% if data.data == 1 then %>
-        <td class="white"></td>
+        <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
@@ -90,11 +90,11 @@
       <tr>
         <% @gamedata7.each.with_index(61) do |data,index| %>
         <% if data.data == 1 then %>
-        <td class="white"></td>
+        <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
@@ -102,11 +102,11 @@
       <tr>
         <% @gamedata8.each.with_index(71) do |data,index| %>
         <% if data.data == 1 then %>
-        <td class="white"></td>
+        <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
@@ -114,30 +114,30 @@
       <tr>
         <% @gamedata9.each.with_index(81) do |data,index| %>
         <% if data.data == 1 then %>
-        <td class="white"></td>
+        <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
 
       <tr>
-        <% @gamedata10.each.with_index(90) do |data,index| %>
+        <% @gamedata10.each.with_index(91) do |data,index| %>
         <% if data.data == 1 then %>
         <td class="white" id="<%= index %>"></td>
         <% elsif data.data == 2 then %>
-        <td class ="black"></td>
+        <td class ="black" id="<%= index %>"></td>
         <% else %>
-        <td class="gray"></td>
+        <td class="gray" id="<%= index %>"></td>
         <% end %>
         <% end %>
       </tr>
     </table>
-    <form action="/new" method="post">
-      <p>数値：<input type="text" name="data"> <input type="submit" value="追加"></p>
-    </form>
+    <!--<form action="/new" method="post">-->
+    <!--  <p>数値：<input type="text" name="data"> <input type="submit" value="追加"></p>-->
+    <!--</form>-->
   </div>
 </body>
 </html>

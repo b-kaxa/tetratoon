@@ -7,3 +7,7 @@
 ## DB確認
 
 `sqlite3 db/development.db`
+
+## log出力
+
+`logger.info "loading data"`

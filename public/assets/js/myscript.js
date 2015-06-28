@@ -3,7 +3,7 @@ $(function(){
         var id = $(this).prop("id");
         console.log(id);
         
-        var post_data = "black=true&data=2&id=" + id
+        var post_data = "black=true&data=0&id=" + id
         
         $.ajax({
           type: "POST",
