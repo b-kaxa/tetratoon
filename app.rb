@@ -31,25 +31,21 @@ end
 
 post '/update' do
 
-  # 大体こんな感じだけどデータによっては後でロジックを変更
   # if params[:black] then
-  #   @content = Gamedata.where(:id => params[:id])
+    # if params[:data]
+    #   data = params[:data]
+    # end
 
-  #   @content.update({
-  #     data: params[:data]
-  #   })
+    # Gamedata.where(id: params[:update_blocks]).update_all(data: data)
   # end
 
   # if params[:white] then
-    if params[:id]
-      update_id = params[:id]
+    if params[:data]
+      data = params[:data]
     end
 
-    content = Gamedata.where(:id => update_id).first
-    
-    content.data = params[:data]
-    content.save
+    Gamedata.where(id: params[:update_blocks]).update_all(data: data)
   # end
 
-  # redirect '/'
+  redirect '/'
 end

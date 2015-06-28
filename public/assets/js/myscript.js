@@ -21,25 +21,23 @@ $(function(){
        }
     }
 
-    var res = small_block_diff.map(function(diff) {
+    var update_blocks = small_block_diff.map(function(diff) {
                 return parseInt(clicked_id) + diff;
               });
 
-    console.log(res);
-
-    // var post_data = "black=true&data=0&id=" + id
-
-    // $.ajax({
-    //   type: "POST",
-    //   url: "/update",
-    //   data: post_data,
-    //   success: function(msg){
-    //     location.href="/";
-    //   },
-    //   error: function(msg){
-    //     console.log("aaa");
-    //   }
-    // });
+    // ajaxで/updateにpostする
+    $.ajax({
+      type: "POST",
+      url: "/update",
+      data: {
+        black : true,
+        data : 1,
+        update_blocks: update_blocks
+      },
+      success: function(msg){
+        location.href="/";
+      }
+    });
     
   });
 });
