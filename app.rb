@@ -26,31 +26,30 @@ post '/new' do
     data: params[:data]
   })
   
-  if params[:file]
-    image_upload(params[:file])
-  end
-  
   redirect '/'
 end
 
 post '/update' do
 
   # 大体こんな感じだけどデータによっては後でロジックを変更
-  if params[:black]
-    @content = Gamedata.find(params[:id])
+  # if params[:black] then
+  #   @content = Gamedata.where(:id => params[:id])
 
-    @content.update({
-      data: params[:data]
-    })
-  end
+  #   @content.update({
+  #     data: params[:data]
+  #   })
+  # end
 
-  if params[:white]
-    @content = Gamedata.find(params[:id])
+  # if params[:white] then
+    if params[:id]
+      update_id = params[:id]
+    end
 
-    @content.update({
-      data: params[:data]
-    })
-  end
+    content = Gamedata.where(:id => update_id).first
+    
+    content.data = params[:data]
+    content.save
+  # end
 
-  redirect '/'
+  # redirect '/'
 end
