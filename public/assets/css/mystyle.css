@@ -3,15 +3,17 @@ body {
     color: white;
 }
 .center {
-    width: 660px;
-    height: auto;
     margin: 20px auto;
+}
+.center img {
+    width: auto;
+    height: 25px;
 }
 
 .table {
     width: 400px;
     height: 400px;
-    margin: 50px auto;
+    margin: 10px auto 0;
 }
 .table td {
     width: 10%;
@@ -27,4 +29,17 @@ body {
 }
 .table .gray {
     /*background-color: gray;*/
+}
+div.row{
+    margin: 20px auto;
+    height: auto;
+}
+div.next_blocks table {
+    width: auto;
+    height: auto;
+    margin: 20px;
+}
+div.next_blocks table td{
+    width: 40px;
+    height: 40px;
 }
