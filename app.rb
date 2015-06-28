@@ -10,6 +10,14 @@ require './models.rb'
 get '/' do
   @gamedata1 = Gamedata.limit(10).offset(0)
   @gamedata2 = Gamedata.limit(10).offset(10)
+  @gamedata3 = Gamedata.limit(10).offset(20)
+  @gamedata4 = Gamedata.limit(10).offset(30)
+  @gamedata5 = Gamedata.limit(10).offset(40)
+  @gamedata6 = Gamedata.limit(10).offset(50)
+  @gamedata7 = Gamedata.limit(10).offset(60)
+  @gamedata8 = Gamedata.limit(10).offset(70)
+  @gamedata9 = Gamedata.limit(10).offset(80)
+  @gamedata10 = Gamedata.limit(10).offset(90)
   erb :index
 end
 

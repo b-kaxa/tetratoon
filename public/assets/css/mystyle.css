@@ -1,0 +1,30 @@
+body {
+    background: url("../img/back.png");
+    color: white;
+}
+.center {
+    width: 660px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.table {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+}
+.table td {
+    width: 10%;
+    height: 10%;
+}
+
+.table .white {
+    background-color: white;
+}
+
+.table .black {
+    background-color: black;
+}
+.table .gray {
+    /*background-color: gray;*/
+}
