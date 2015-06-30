@@ -5,7 +5,7 @@ $(function(){
 
     // next blockの色の付いているブロックのidを取得
     var diff = [];
-    $("#next_blocks td.black").each(function(i, elem) {
+    $("#next_blocks td.white").each(function(i, elem) {
         diff[i] = $(elem).prop("id")
     });
     
@@ -30,11 +30,11 @@ $(function(){
       type: "POST",
       url: "/update",
       data: {
-        data : 2,
+        data : 1,
         update_blocks: update_blocks
       },
       success: function(){
-        location.href="/";
+        location.href="/black";
       }
     });
     

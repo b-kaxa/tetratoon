@@ -22,15 +22,29 @@ get '/' do
   erb :index
 end
 
+get '/black' do
+  # 力技
+  @gamedata1 = Gamedata.limit(10).offset(0)
+  @gamedata2 = Gamedata.limit(10).offset(10)
+  @gamedata3 = Gamedata.limit(10).offset(20)
+  @gamedata4 = Gamedata.limit(10).offset(30)
+  @gamedata5 = Gamedata.limit(10).offset(40)
+  @gamedata6 = Gamedata.limit(10).offset(50)
+  @gamedata7 = Gamedata.limit(10).offset(60)
+  @gamedata8 = Gamedata.limit(10).offset(70)
+  @gamedata9 = Gamedata.limit(10).offset(80)
+  @gamedata10 = Gamedata.limit(10).offset(90)
+  erb :black
+end
+
 post '/update' do
 
   if params[:data]
     data = params[:data]
+    Gamedata.where(id: params[:update_blocks]).update_all(data: data)
   end
-
-  Gamedata.where(id: params[:update_blocks]).update_all(data: data)
-
-  redirect '/'
+  
+  return
 end
 
 get '/reset' do
