@@ -4,15 +4,15 @@ $(function(){
   var white_sq_num = $(".main td.white").size();
   var winner = (black_sq_num > white_sq_num) ? "black" : "white";
 
-  if(black_sq_num == white_sq_num){
-    alertify.alert("finish!");
-    alertify.alert("Draw!");
-  }
-  
   if(gray_sq_num < 25){
-    alertify.alert("finish!");
-    alertify.alert("winner ... ");
-    alertify.alert( winner + "!!!");
+    if(black_sq_num == white_sq_num){
+      alertify.alert("finish!");
+      alertify.alert("Draw!");
+    } else {
+      alertify.alert("finish!");
+      alertify.alert("winner ... ");
+      alertify.alert( winner + "!!!");
+    }
   }
 
   $("td").click(function(){
