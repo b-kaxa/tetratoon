@@ -3,8 +3,10 @@ $(function(){
   var black_sq_num = $(".main td.black").size();
   var white_sq_num = $(".main td.white").size();
   var winner = (black_sq_num > white_sq_num) ? "black" : "white";
+
   if(black_sq_num == white_sq_num){
-    winner = "Draw";
+    alertify.alert("finish!");
+    alertify.alert("Draw!");
   }
   
   if(gray_sq_num < 25){
