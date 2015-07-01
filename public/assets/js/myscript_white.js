@@ -7,7 +7,7 @@ $(function(){
     winner = "Draw";
   }
   
-  if(gray_sq_num < 15){
+  if(gray_sq_num < 25){
     alertify.alert("finish!");
     alertify.alert("winner ... ");
     alertify.alert( winner + "!!!");
