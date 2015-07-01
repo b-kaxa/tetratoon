@@ -5,7 +5,10 @@
   <title>tetratoon</title>
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/mystyle.css">
+  <link rel="stylesheet" href="/assets/css/alertify.core.css">
+  <link rel="stylesheet" href="/assets/css/alertify.default.css">
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="/assets/js/alertify.min.js"></script>
   <script src="/assets/js/myscript_white.js"></script>
 </head>
 <body>
@@ -14,7 +17,7 @@
       <a href="/reset"><img src="/assets/img/logo.png"></a>
     </div>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered main">
       <tr>
         <% @gamedata1.each.with_index(1) do |data,index| %>
         <% if data.data == 1 then %>

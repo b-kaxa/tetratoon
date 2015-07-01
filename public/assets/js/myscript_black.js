@@ -1,4 +1,9 @@
 $(function(){
+  var gray_sq_num = $(".main td.gray").size();
+  if(gray_sq_num < 50){
+    alertify.alert("finish!\n");
+  }
+  
   $("td").click(function(){
     // clickしたブロックのid
     var clicked_id = $(this).prop("id");
