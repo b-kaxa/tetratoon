@@ -1,13 +1,14 @@
 # tetratoon
 
-## 実行コマンド
+an original game created by b-kaxa
 
-`ruby app.rb -p $PORT -o $IP`
+## playing
 
-## DB確認
+```
+git clone git@github.com:b-kaxa/tetratoon.git
+cd tetratoon
+bundle install
+ruby app.rb
+```
 
-`sqlite3 db/development.db`
-
-## log出力
-
-`logger.info "loading data"`
+and you access to `http://localhost:4567/`
