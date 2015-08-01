@@ -1,6 +1,6 @@
 # tetratoon
 
-an original game created by b-kaxa
+## an original game created by b-kaxa
 
 ![Alt text](./thumbnail.png?raw=true "screen shot")
 
@@ -12,8 +12,8 @@ cd tetratoon
 bundle install
 ruby app.rb
 ```
-
-and you access to `http://localhost:4567/`
+- you access to `http://localhost:4567/`
+- and you can enjoy the game!
 
 ## rules
 
@@ -22,9 +22,13 @@ and you access to `http://localhost:4567/`
 
 ## click field
 
-- you can click yourself color block.
-- will paint field by your color.
+- you can click only yourself color block on field.
+- will paint field by your color lower-left blocks.
 
 ## winner
 
 - after some turn, player having themself more color blocks is winner.
+
+## reset
+
+- please click upper logo.
