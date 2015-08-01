@@ -2,6 +2,8 @@
 
 an original game created by b-kaxa
 
+![Alt text](./thumbnail.png?raw=true "screen shot")
+
 ## playing
 
 ```
