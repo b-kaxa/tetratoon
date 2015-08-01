@@ -4,7 +4,6 @@ require 'sinatra/reloader' if development?
 require 'open-uri'
 require "sinatra/json"
 
-require './image_uploader.rb'
 require './models.rb'
 
 get '/' do
